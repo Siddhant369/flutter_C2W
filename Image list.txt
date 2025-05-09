@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  List<String> imageList = [
+    "https://th.bing.com/th/id/OIP.fBb1Xk7pHvonDxiusWS6VQAAAA?rs=1&pid=ImgDetMain"
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Elon_Musk_2015.jpg/113px-Elon_Musk_2015.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Elon_Musk_Colorado_2022_%28cropped2%29.jpg/440px-Elon_Musk_Colorado_2022_%28cropped2%29.jpg",
+  ];
+
+  Map<String, String> obj = {"name": "Elon Musk", "age": "53"};
+
+  int currentIndex = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.network(imageList[currentIndex], height: 200, width: 200),
+              SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {
+                  if (currentIndex < imageList.length - 1) {
+                    currentIndex++;
+                  } else {
+                    currentIndex = 0;
+                  }
+                  setState(() {});
+                },
+                child: Text("Next", style: TextStyle(fontSize: 30)),
+              ),
+              SizedBox(height: 30),
+              Text("Name: ${obj['name']}", style: TextStyle(fontSize: 30)),
+              SizedBox(height: 10),
+              Text("Age: ${obj['age']}", style: TextStyle(fontSize: 30)),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
