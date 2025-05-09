@@ -1,0 +1,86 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text("IPL"), centerTitle: true),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.red,import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  State createState() {
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State {
+  bool isBlue = true;
+
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Toggle Container"),
+          centerTitle: true,
+          backgroundColor: Colors.blue,
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 250,
+                width: 250,
+                color: isBlue ? Colors.blue : Colors.red,
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  if (isBlue == true) {
+                    isBlue = false;
+                  } else {
+                    isBlue = true;
+                  }
+
+                  setState(() {});
+                },
+                child: Text("Toggle", style: TextStyle(fontSize: 20)),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+                child: Image.network(
+                  'https://th.bing.com/th/id/R.ad472a648459322184260c5774c8e90e?rik=OXNQwdATXpuo8g&riu=http%3a%2f%2f4.bp.blogspot.com%2f-fncCzJ4MBaY%2fUORIvvaP6VI%2fAAAAAAAAAP8%2fKxMi83zTh4o%2fs1600%2fVirat%2bKohli%2bHD%2bWallpapers%2b(5).jpg&ehk=iNROpFcb5CRyPT6xAnHOCAgfNWsej3ccfPgscM%2fdOj0%3d&risl=&pid=ImgRaw&r=0',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const SizedBox(height: 20),
+              const Text("Virat Kohli", style: TextStyle(fontSize: 30)),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
