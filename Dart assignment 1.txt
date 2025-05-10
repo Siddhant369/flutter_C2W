@@ -1,0 +1,113 @@
+//In this code, we declare two integers, sh1 and sh2, and assign them values 19 and 11
+//We then add them and store the result in sh3
+//The output will be 30 when we print sh3.
+void main() {
+  int sh1 = 19;
+  int sh2 = 11;
+  int sh3 = sh1 + sh2;
+  print(sh3);
+}
+
+//This code adds an integer (sh1) and a double (sh2)
+//Dart automatically converts the result to a double so sh3 becomes 30.0
+//The output will be 30.0
+
+
+void main() {
+  int sh1 = 19;
+  double sh2 = 11;
+  var sh3 = sh1 + sh2;
+  print(sh3);
+}
+
+
+//This code gives an error because we are trying to store a double result into an int variable sh3
+
+void main() {
+  int sh1 = 19;
+  double sh2 = 11;
+  int sh3 = sh1 + sh2;
+  print(sh3);
+}
+
+//In this code, we add x and y and store the result as a string in str using interpolation ${} The output will be 30.0 as a string
+void main() {
+  String str;
+  int x = 10;
+  double y = 20;
+  str = "${x + y}";
+  print(str);
+}
+
+//This code gives an error
+void main() {
+  bool valueFirst = 1;
+  bool valueSecond = 0;
+  print(valueFirst);
+  print(valueSecond);
+}
+
+//Input Output Programs
+
+import 'dart:io';
+
+void main() {
+  print("Enter your name:");
+  String? name = stdin.readLineSync();
+
+  print("Enter your age:");
+  int age = int.parse(stdin.readLineSync()!);
+
+  print("Enter your percentage:");
+  double percentage = double.parse(stdin.readLineSync()!);
+
+  print("Name: $name");
+  print("Age: $age");
+  print("Percentage: $percentage");
+}
+
+
+import 'dart:io';
+
+void main() {
+  print("Enter first number:");
+  int a = int.parse(stdin.readLineSync()!);
+
+  print("Enter second number:");
+  int b = int.parse(stdin.readLineSync()!);
+
+  int sum = a + b;
+  print("Sum: $sum");
+}
+
+import 'dart:io';
+
+void main() {
+  print("Enter principal:");
+  double p = double.parse(stdin.readLineSync()!);
+
+  print("Enter rate of interest:");
+  double r = double.parse(stdin.readLineSync()!);
+
+  print("Enter time in years:");
+  double t = double.parse(stdin.readLineSync()!);
+
+  double si = (p * r * t) / 100;
+  print("Simple Interest: $si");
+}
+
+
+import 'dart:io';
+
+void main() {
+  print("Enter radius of the circle:");
+  double r = double.parse(stdin.readLineSync()!);
+
+  double area = 3.14 * r * r;
+  print("Area of Circle: $area");
+}
+
+
+
+
+
