@@ -1,0 +1,146 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(Core2WebApp());
+}
+
+class Core2WebApp extends StatelessWidget {
+  const Core2WebApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(home: HomeScreen(), debugShowCheckedModeBanner: false);
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Hello Core2web"),
+        backgroundColor: Colors.deepPurple,
+        centerTitle: true,
+        actions: [Icon(Icons.notifications), Icon(Icons.settings)],
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+
+              Container(width: 360, height: 200, color: Colors.blue),
+
+              SizedBox(height: 20),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.green,
+                    margin: EdgeInsets.all(8),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.green,
+                    margin: EdgeInsets.all(8),
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 20),
+
+              Column(
+                children: [
+                  Image.network(
+                    "https://th.bing.com/th/id/OIP.r5b-K5Fs7Lu_RznExR-P8AHaE8?rs=1&pid=ImgDetMain",
+                    width: 150,
+                    height: 150,
+                  ),
+                  SizedBox(height: 10),
+                  Image.network(
+                    "https://th.bing.com/th/id/OIP.r5b-K5Fs7Lu_RznExR-P8AHaE8?rs=1&pid=ImgDetMain",
+                    width: 150,
+                    height: 150,
+                  ),
+                  SizedBox(height: 10),
+                  Image.network(
+                    "https://th.bing.com/th/id/OIP.r5b-K5Fs7Lu_RznExR-P8AHaE8?rs=1&pid=ImgDetMain",
+                    width: 150,
+                    height: 150,
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 20),
+
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.red),
+                ),
+              ),
+
+              SizedBox(height: 20),
+
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.red),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+
+              SizedBox(height: 20),
+
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  color: Colors.orange,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 20),
+
+              Container(
+                width: 150,
+                height: 150,
+                decoration: BoxDecoration(
+                  color: Colors.purple,
+                  shape: BoxShape.circle,
+                ),
+              ),
+
+              SizedBox(height: 20),
+
+              Container(
+                width: 300,
+                height: 100,
+                color: Colors.teal,
+                alignment: Alignment.center,
+                child: Text(
+                  "Hello Incubators",
+                  style: TextStyle(fontSize: 22, color: Colors.white),
+                ),
+              ),
+
+              SizedBox(height: 40),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
