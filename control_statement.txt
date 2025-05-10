@@ -1,0 +1,128 @@
+import 'dart:io';
+
+void main() {
+  // Program 1: Even or Odd
+  stdout.write("Enter a number (Even/Odd Check): ");
+  int x1 = int.parse(stdin.readLineSync()!);
+  if (x1 % 2 == 0) {
+    print("$x1 is an even number");
+  } else {
+    print("$x1 is an odd number");
+  }
+
+  // Program 2: Less than or Greater than 10
+  stdout.write("\nEnter a number (Compare with 10): ");
+  int x2 = int.parse(stdin.readLineSync()!);
+  if (x2 < 10) {
+    print("$x2 is less than 10");
+  } else {
+    print("$x2 is greater than 10");
+  }
+
+  // Program 3: Voting Eligibility
+  stdout.write("\nEnter your age (Voting Check): ");
+  int age = int.parse(stdin.readLineSync()!);
+  if (age >= 18) {
+    print("You can cast a vote");
+  } else {
+    print("You can't cast a vote");
+  }
+
+  // Program 4: Positive or Negative
+  stdout.write("\nEnter a number (Positive/Negative Check): ");
+  int x4 = int.parse(stdin.readLineSync()!);
+  if (x4 > 0) {
+    print("$x4 is a positive number");
+  } else {
+    print("$x4 is a negative number");
+  }
+
+  // Program 5: Vowel or Consonant
+  stdout.write("\nEnter a character (Vowel/Consonant Check): ");
+  String ch = stdin.readLineSync()!.toUpperCase();
+  if ("AEIOU".contains(ch)) {
+    print("$ch is a vowel");
+  } else {
+    print("$ch is a consonant");
+  }
+
+  // Program 6: Number Spelling (0 to 5)
+  stdout.write("\nEnter a number (0-5): ");
+  int x6 = int.parse(stdin.readLineSync()!);
+  switch (x6) {
+    case 0:
+      print("zero");
+      break;
+    case 1:
+      print("one");
+      break;
+    case 2:
+      print("two");
+      break;
+    case 3:
+      print("three");
+      break;
+    case 4:
+      print("four");
+      break;
+    case 5:
+      print("five");
+      break;
+    default:
+      print("$x6 is greater than 5");
+  }
+
+  // Program 7: Days in Month
+  stdout.write("\nEnter month number (1-12): ");
+  int month = int.parse(stdin.readLineSync()!);
+  if ([1, 3, 5, 7, 8, 10, 12].contains(month)) {
+    print("This month has 31 days");
+  } else if ([4, 6, 9, 11].contains(month)) {
+    print("This month has 30 days");
+  } else if (month == 2) {
+    print("February has 28 or 29 days");
+  } else {
+    print("Invalid month");
+  }
+
+  // Program 8: Divisible by 3 and/or 5
+  stdout.write("\nEnter a number (Divisibility Check): ");
+  int x8 = int.parse(stdin.readLineSync()!);
+  if (x8 % 3 == 0 && x8 % 5 == 0) {
+    print("Divisible by both");
+  } else if (x8 % 3 == 0) {
+    print("Divisible by 3");
+  } else if (x8 % 5 == 0) {
+    print("Divisible by 5");
+  } else {
+    print("Not divisible by 3 or 5");
+  }
+
+  // Program 9: Cricket Ticket Price
+  stdout.write("\nEnter ticket stand (1-Upper, 2-Middle, 3-Lower, Others): ");
+  int stand = int.parse(stdin.readLineSync()!);
+  if (stand == 1) {
+    print("Please pay 2000 rupees");
+  } else if (stand == 2) {
+    print("Please pay 3000 rupees");
+  } else if (stand == 3) {
+    print("Please pay 7000 rupees");
+  } else {
+    print("Please pay 2500 rupees");
+  }
+
+  // Program 10: Electricity Bill
+  stdout.write("\nEnter electricity units consumed: ");
+  int units = int.parse(stdin.readLineSync()!);
+  int bill = 0;
+  if (units <= 90) {
+    bill = 0;
+  } else if (units <= 180) {
+    bill = (units - 90) * 6;
+  } else if (units <= 250) {
+    bill = (90 * 0) + (90 * 6) + (units - 180) * 10;
+  } else {
+    bill = (90 * 0) + (90 * 6) + (70 * 10) + (units - 250) * 15;
+  }
+  print("Output: $bill");
+}
